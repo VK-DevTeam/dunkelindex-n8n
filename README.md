@@ -1,13 +1,24 @@
-# Deploy n8n on Render
+# n8n on Render
 
-> [!IMPORTANT]
-> **View full deployment instructions in the [**Render docs**](https://render.com/docs/deploy-n8n).**
+Workflow automation hosted on Render.com
 
-This template defines a [`render.yaml`](https://github.com/render-examples/n8n/blob/main/render.yaml) file you can use to deploy [n8n](https://n8n.io/) on Render. Click **Use this template** in the upper right to copy this template into your account as a new repo.
+## Setup
 
-The `render.yaml` file defines the following resources:
+1. Push to GitHub
+2. Connect repository to Render
+3. Set environment variables in Render dashboard:
+   - `WEBHOOK_URL`: Your custom domain URL (e.g., `https://n8n.yourdomain.com`)
+   - `N8N_BASIC_AUTH_USER`: Your admin username
+   - `N8N_BASIC_AUTH_PASSWORD`: Your admin password
+4. Deploy
+5. Add custom domain in Render settings
 
-- A web service that pulls and runs the official n8n Docker image
-- A Render Postgres database that stores n8n data
+## Importing Workflows
 
-Each of the above uses a free instance type by default.
+Once deployed, import `Dunkel Index Premium Picks.json` through the n8n UI:
+- Workflows → Import from File
+
+## Notes
+
+- For production, configure PostgreSQL database connection
+- Update `WEBHOOK_URL` after adding custom domain
