@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "n8n workflow automation on Render",
   "scripts": {
-    "start": "node_modules/.bin/n8n"
+    "start": "n8n start"
   },
   "dependencies": {
     "n8n": "^1.0.0"
