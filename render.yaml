@@ -2,6 +2,7 @@ services:
   - type: web
     name: n8n
     env: node
+    plan: starter
     nodeVersion: "20"
     buildCommand: npm install --legacy-peer-deps
     startCommand: npm start
