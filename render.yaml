@@ -3,7 +3,6 @@ services:
     name: n8n
     env: node
     plan: starter
-    nodeVersion: "20"
     buildCommand: npm install --legacy-peer-deps
     startCommand: npm start
     envVars:
@@ -21,5 +20,7 @@ services:
         generateValue: true
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: "20"
       - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
         value: "false"
